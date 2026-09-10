@@ -1,6 +1,6 @@
 import Image from "next/image";
 import profileImg from "@/public/profile.png";
-import yaleImg from "@/public/yale-art.jpg";
+import yaleImg from "@/public/yale-art.png";
 
 export default function Home() {
   return (
