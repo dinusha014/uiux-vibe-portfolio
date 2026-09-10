@@ -1,5 +1,6 @@
 import Image from "next/image";
 import profileImg from "@/public/profile.png";
+import yaleImg from "@/public/yale-art.jpg";
 
 export default function Home() {
   return (
@@ -54,7 +55,7 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap gap-4">
             <a href="#projects" className="bg-purple-600 hover:bg-purple-500 text-white px-5 py-2.5 rounded-lg font-medium text-sm transition shadow-lg shadow-purple-500/25">
-              View Design Experiments
+              View Design Projects
             </a>
             <a href="#contact" className="border border-gray-700 hover:border-gray-500 px-5 py-2.5 rounded-lg font-medium text-sm text-gray-300 transition">
               Get in Touch
@@ -81,14 +82,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects / Experiments */}
+      {/* Projects Section */}
       <section id="projects" className="max-w-6xl mx-auto my-20">
-        <h2 className="text-sm font-mono text-purple-400 tracking-wider mb-6">// VIBE_CODING_&_UI_EXPERIMENTS</h2>
+        <h2 className="text-sm font-mono text-purple-400 tracking-wider mb-6">// FEATURED_UIUX_PROJECTS</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
+          {/* Project 1: Yale School of Art UI Redesign */}
+          <div className="bg-gray-900/30 border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500/40 transition flex flex-col justify-between group">
+            <div>
+              <div className="relative w-full h-48 overflow-hidden">
+                <Image
+                  src={yaleImg}
+                  alt="Yale School of Art Website Design"
+                  fill
+                  className="object-cover group-hover:scale-105 transition duration-500"
+                />
+              </div>
+              <div className="p-6">
+                <span className="text-[10px] font-mono text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded">Campus UI/UX Project</span>
+                <h3 className="text-lg font-bold mt-3 mb-2 text-white">Yale School of Art Website Redesign</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                  Redesigned the educational platform interface focusing on modern typography, hero layouts, responsive grid structures, and interactive navigation elements.
+                </p>
+              </div>
+            </div>
+            <div className="px-6 pb-6">
+              <a
+                href="https://www.figma.com/design/hAvKckrJrOpsYFByHwCsgE/Yale-school-of-art---website?node-id=0-1&p=f&t=9jPgHBqPfMG1CAZx-0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-mono text-cyan-400 hover:underline inline-flex items-center gap-1"
+              >
+                [ Open in Figma ↗ ]
+              </a>
+            </div>
+          </div>
+
+          {/* Project 2: AI Layouts */}
           <div className="bg-gray-900/30 border border-gray-800 p-6 rounded-xl hover:border-purple-500/40 transition flex flex-col justify-between">
             <div>
-              <span className="text-[10px] font-mono text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">AI Layouts</span>
+              <span className="text-[10px] font-mono text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">AI & Front-End</span>
               <h3 className="text-lg font-bold mt-3 mb-2 text-white">AI-Assisted Web & UI Layout Experiments</h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-4">
                 Translated visual design concepts and wireframes directly into functional HTML/CSS/JS layouts using modern AI tools and vibe coding techniques.
@@ -97,26 +130,16 @@ export default function Home() {
             <span className="text-xs font-mono text-purple-400">Prompt Engineering & Rapid Prototyping</span>
           </div>
 
+          {/* Project 3: Digital Content */}
           <div className="bg-gray-900/30 border border-gray-800 p-6 rounded-xl hover:border-purple-500/40 transition flex flex-col justify-between">
             <div>
-              <span className="text-[10px] font-mono text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded">Figma & Canva</span>
+              <span className="text-[10px] font-mono text-pink-400 bg-pink-500/10 px-2 py-0.5 rounded">Figma & Canva</span>
               <h3 className="text-lg font-bold mt-3 mb-2 text-white">Digital Content & Brand Assets</h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-4">
                 Designed promotional flyers, custom UI components, presentation templates, and social media brand kits adhering to visual design guidelines.
               </p>
             </div>
             <span className="text-xs font-mono text-purple-400">Visual Communication & Branding</span>
-          </div>
-
-          <div className="bg-gray-900/30 border border-gray-800 p-6 rounded-xl hover:border-purple-500/40 transition flex flex-col justify-between">
-            <div>
-              <span className="text-[10px] font-mono text-pink-400 bg-pink-500/10 px-2 py-0.5 rounded">Campus Projects</span>
-              <h3 className="text-lg font-bold mt-3 mb-2 text-white">Academic UI/UX Projects</h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                Formulated structured resume layouts and interactive prototype concepts for campus events and digital platforms.
-              </p>
-            </div>
-            <span className="text-xs font-mono text-purple-400">User Experience & Prototyping</span>
           </div>
 
         </div>
