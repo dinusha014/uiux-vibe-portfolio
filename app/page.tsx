@@ -3,10 +3,11 @@ import Image from "next/image";
 // Profile Photo
 import profileImg from "@/public/profile.png";
 
-// UI/UX Projects
+// UI/UX & Web Projects
+import tourismImg from "@/public/tourism-ai.png";
+import gemlinkImg from "@/public/gemlink-app.png";
 import yaleImg from "@/public/yale-art.png";
 import darazImg from "@/public/daraz-ui.png";
-import gemlinkImg from "@/public/gemlink-app.png";
 
 // Flyer Images
 import flyer01 from "@/public/01.jpeg";
@@ -102,13 +103,46 @@ export default function Home() {
 
       {/* Featured UI/UX Projects Section */}
       <section id="projects" className="max-w-6xl mx-auto my-20">
-        <h2 className="text-sm font-mono text-purple-400 tracking-wider mb-6">// FEATURED_UIUX_PROJECTS</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <h2 className="text-sm font-mono text-purple-400 tracking-wider mb-6">// FEATURED_UIUX_&_AI_PROJECTS</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           
-          {/* Project 1: GemLink Mobile App */}
+          {/* Project 1: Sri Lanka Tourism Agentic AI Web App */}
+          <div className="bg-gray-900/30 border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500/40 transition flex flex-col justify-between group md:col-span-2">
+            <div className="grid grid-cols-1 md:grid-cols-12 items-center">
+              <div className="md:col-span-7 relative w-full h-64 md:h-80 overflow-hidden bg-gray-950">
+                <Image
+                  src={tourismImg}
+                  alt="Sri Lanka Tourism AI Assistant Interface"
+                  fill
+                  className="object-cover object-left-top group-hover:scale-105 transition duration-500"
+                />
+              </div>
+              <div className="md:col-span-5 p-6 flex flex-col justify-between h-full">
+                <div>
+                  <span className="text-[10px] font-mono text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded">Agentic AI & Web UI</span>
+                  <h3 className="text-xl font-bold mt-3 mb-2 text-white">Sri Lanka Tourism Microbusiness Assistant</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                    Designed and built an intuitive, dark-themed Web UI for an Agentic AI assistant that empowers local tourism microbusinesses with smart itineraries, local tips, and travel guidance.
+                  </p>
+                </div>
+                <div>
+                  <a
+                    href="https://github.com/dinusha014/SriLanka-Tourism-Microbusiness-Assistant"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-mono text-cyan-400 hover:underline inline-flex items-center gap-1"
+                  >
+                    [ View Repository on GitHub ↗ ]
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Project 2: GemLink Mobile App */}
           <div className="bg-gray-900/30 border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500/40 transition flex flex-col justify-between group">
             <div>
-              <div className="relative w-full h-72 overflow-hidden bg-gray-950 flex items-center justify-center p-4">
+              <div className="relative w-full h-64 overflow-hidden bg-gray-950 flex items-center justify-center p-4">
                 <Image
                   src={gemlinkImg}
                   alt="GemLink Mobile App UI Design"
@@ -136,10 +170,10 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Project 2: Yale School of Art UI Redesign */}
+          {/* Project 3: Yale School of Art UI Redesign */}
           <div className="bg-gray-900/30 border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500/40 transition flex flex-col justify-between group">
             <div>
-              <div className="relative w-full h-72 overflow-hidden bg-gray-950">
+              <div className="relative w-full h-64 overflow-hidden bg-gray-950">
                 <Image
                   src={yaleImg}
                   alt="Yale School of Art Website Design"
@@ -167,10 +201,10 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Project 3: Daraz E-Commerce Service Redesign */}
-          <div className="bg-gray-900/30 border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500/40 transition flex flex-col justify-between group">
-            <div>
-              <div className="relative w-full h-72 overflow-hidden bg-gray-950">
+          {/* Project 4: Daraz E-Commerce Service Redesign */}
+          <div className="bg-gray-900/30 border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500/40 transition flex flex-col justify-between group md:col-span-2">
+            <div className="grid grid-cols-1 md:grid-cols-12 items-center">
+              <div className="md:col-span-7 relative w-full h-64 md:h-80 overflow-hidden bg-gray-950">
                 <Image
                   src={darazImg}
                   alt="Daraz E-Commerce Service UI Redesign"
@@ -178,23 +212,25 @@ export default function Home() {
                   className="object-cover object-top group-hover:scale-105 transition duration-500"
                 />
               </div>
-              <div className="p-6">
-                <span className="text-[10px] font-mono text-pink-400 bg-pink-500/10 px-2 py-0.5 rounded">E-Commerce UI Design</span>
-                <h3 className="text-lg font-bold mt-3 mb-2 text-white">Daraz E-Commerce Promotional UI Concept</h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                  Crafted an engaging e-commerce interface featuring high-converting hero promotional banners, category navigation, and modern trending product cards.
-                </p>
+              <div className="md:col-span-5 p-6 flex flex-col justify-between h-full">
+                <div>
+                  <span className="text-[10px] font-mono text-pink-400 bg-pink-500/10 px-2 py-0.5 rounded">E-Commerce UI Design</span>
+                  <h3 className="text-xl font-bold mt-3 mb-2 text-white">Daraz E-Commerce Promotional UI Concept</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                    Crafted an engaging e-commerce interface featuring high-converting hero promotional banners, category navigation, and modern trending product cards.
+                  </p>
+                </div>
+                <div>
+                  <a
+                    href="https://www.figma.com/design/hFyQTRxX7r1ZnYOBiXrmbU/Daraz---Service?node-id=0-1&p=f&t=p8wQmTkTpI1OUxUJ-0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-mono text-cyan-400 hover:underline inline-flex items-center gap-1"
+                  >
+                    [ Open in Figma ↗ ]
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="px-6 pb-6">
-              <a
-                href="https://www.figma.com/design/hFyQTRxX7r1ZnYOBiXrmbU/Daraz---Service?node-id=0-1&p=f&t=p8wQmTkTpI1OUxUJ-0"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-mono text-cyan-400 hover:underline inline-flex items-center gap-1"
-              >
-                [ Open in Figma ↗ ]
-              </a>
             </div>
           </div>
 
