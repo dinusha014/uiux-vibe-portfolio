@@ -1,7 +1,23 @@
 import Image from "next/image";
+
+// Profile Photo
 import profileImg from "@/public/profile.png";
+
+// UI/UX Projects
 import yaleImg from "@/public/yale-art.png";
 import darazImg from "@/public/daraz-ui.png";
+
+// Flyer Images
+import flyer01 from "@/public/01.jpeg";
+import flyer02 from "@/public/02.jpeg";
+import flyer03 from "@/public/03.jpeg";
+import flyer04 from "@/public/04.jpeg";
+import flyer05 from "@/public/05.jpeg";
+import flyer06 from "@/public/06.jpeg";
+import flyer07 from "@/public/07.jpeg";
+import flyer08 from "@/public/08.jpeg";
+import flyer09 from "@/public/09.jpeg";
+import flyer10 from "@/public/10.jpeg";
 
 export default function Home() {
   return (
@@ -56,10 +72,10 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap gap-4">
             <a href="#projects" className="bg-purple-600 hover:bg-purple-500 text-white px-5 py-2.5 rounded-lg font-medium text-sm transition shadow-lg shadow-purple-500/25">
-              View Design Projects
+              View UI/UX Projects
             </a>
-            <a href="#contact" className="border border-gray-700 hover:border-gray-500 px-5 py-2.5 rounded-lg font-medium text-sm text-gray-300 transition">
-              Get in Touch
+            <a href="#graphics" className="border border-purple-500/40 hover:border-purple-400 px-5 py-2.5 rounded-lg font-medium text-sm text-purple-300 transition">
+              Canva & AI Flyers
             </a>
           </div>
         </div>
@@ -83,15 +99,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* Featured UI/UX Projects Section */}
       <section id="projects" className="max-w-6xl mx-auto my-20">
         <h2 className="text-sm font-mono text-purple-400 tracking-wider mb-6">// FEATURED_UIUX_PROJECTS</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           
           {/* Project 1: Yale School of Art UI Redesign */}
           <div className="bg-gray-900/30 border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500/40 transition flex flex-col justify-between group">
             <div>
-              <div className="relative w-full h-48 overflow-hidden bg-gray-950">
+              <div className="relative w-full h-56 overflow-hidden bg-gray-950">
                 <Image
                   src={yaleImg}
                   alt="Yale School of Art Website Design"
@@ -122,7 +138,7 @@ export default function Home() {
           {/* Project 2: Daraz E-Commerce Service Redesign */}
           <div className="bg-gray-900/30 border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500/40 transition flex flex-col justify-between group">
             <div>
-              <div className="relative w-full h-48 overflow-hidden bg-gray-950">
+              <div className="relative w-full h-56 overflow-hidden bg-gray-950">
                 <Image
                   src={darazImg}
                   alt="Daraz E-Commerce Service UI Redesign"
@@ -150,18 +166,47 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Project 3: AI-Assisted Web Experiments */}
-          <div className="bg-gray-900/30 border border-gray-800 p-6 rounded-xl hover:border-purple-500/40 transition flex flex-col justify-between">
-            <div>
-              <span className="text-[10px] font-mono text-pink-400 bg-pink-500/10 px-2 py-0.5 rounded">AI & Vibe Coding</span>
-              <h3 className="text-lg font-bold mt-3 mb-2 text-white">AI-Assisted Web & UI Layout Experiments</h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                Translated visual design concepts and Figma wireframes directly into functional HTML/CSS/JS layouts using modern AI workflows.
-              </p>
-            </div>
-            <span className="text-xs font-mono text-purple-400">Prompt Engineering & Prototyping</span>
-          </div>
+        </div>
+      </section>
 
+      {/* AI & Canva Graphic Design Showcase Gallery */}
+      <section id="graphics" className="max-w-6xl mx-auto my-20">
+        <div className="flex justify-between items-end mb-6 border-b border-gray-800/80 pb-4">
+          <div>
+            <span className="text-[10px] font-mono text-purple-400 bg-purple-500/10 px-2 py-1 rounded">AI & Canva Workflows</span>
+            <h2 className="text-2xl font-bold mt-2 text-white">// DIGITAL_CONTENT_&_EVENT_FLYERS</h2>
+          </div>
+          <span className="text-xs font-mono text-gray-500 hidden sm:block">Campus Media & Promotional Kits</span>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {[
+            { img: flyer01, title: "Call for Applications Poster", category: "CSSL GenZ Chapter" },
+            { img: flyer02, title: "Merchandise Apparel Flyer", category: "Faculty of IT Merchandise" },
+            { img: flyer03, title: "Happy Pongal Harvest Wish", category: "Cultural Event Branding" },
+            { img: flyer04, title: "Movie Night Campus Poster", category: "Promotional Entertainment" },
+            { img: flyer05, title: "Noodles Dansala Event", category: "Campus Event Media" },
+            { img: flyer06, title: "Faculty T-Shirt Order Flyer", category: "Promotional Apparel" },
+            { img: flyer07, title: "Career Readiness Session", category: "Campus to Career Branding" },
+            { img: flyer08, title: "Resonance IT 2026 Showcase", category: "AI Artwork & Tech Media" },
+            { img: flyer09, title: "Mind Maze Champions Poster", category: "Society Celebration Media" },
+            { img: flyer10, title: "Guest Speaker Announcement", category: "Campus Career Session" },
+          ].map((item, idx) => (
+            <div key={idx} className="bg-gray-900/30 border border-gray-800/80 rounded-xl overflow-hidden hover:border-purple-500/40 transition group">
+              <div className="relative w-full h-72 overflow-hidden bg-gray-950">
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition duration-500"
+                />
+              </div>
+              <div className="p-4 bg-gray-900/50">
+                <span className="text-[10px] font-mono text-cyan-400">{item.category}</span>
+                <h3 className="text-sm font-semibold text-white mt-1">{item.title}</h3>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
