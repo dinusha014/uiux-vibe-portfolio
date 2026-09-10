@@ -1,6 +1,7 @@
 import Image from "next/image";
 import profileImg from "@/public/profile.png";
 import yaleImg from "@/public/yale-art.png";
+import darazImg from "@/public/daraz-ui.png";
 
 export default function Home() {
   return (
@@ -90,7 +91,7 @@ export default function Home() {
           {/* Project 1: Yale School of Art UI Redesign */}
           <div className="bg-gray-900/30 border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500/40 transition flex flex-col justify-between group">
             <div>
-              <div className="relative w-full h-48 overflow-hidden">
+              <div className="relative w-full h-48 overflow-hidden bg-gray-950">
                 <Image
                   src={yaleImg}
                   alt="Yale School of Art Website Design"
@@ -118,28 +119,47 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Project 2: AI Layouts */}
-          <div className="bg-gray-900/30 border border-gray-800 p-6 rounded-xl hover:border-purple-500/40 transition flex flex-col justify-between">
+          {/* Project 2: Daraz E-Commerce Service Redesign */}
+          <div className="bg-gray-900/30 border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500/40 transition flex flex-col justify-between group">
             <div>
-              <span className="text-[10px] font-mono text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">AI & Front-End</span>
-              <h3 className="text-lg font-bold mt-3 mb-2 text-white">AI-Assisted Web & UI Layout Experiments</h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                Translated visual design concepts and wireframes directly into functional HTML/CSS/JS layouts using modern AI tools and vibe coding techniques.
-              </p>
+              <div className="relative w-full h-48 overflow-hidden bg-gray-950">
+                <Image
+                  src={darazImg}
+                  alt="Daraz E-Commerce Service UI Redesign"
+                  fill
+                  className="object-cover object-top group-hover:scale-105 transition duration-500"
+                />
+              </div>
+              <div className="p-6">
+                <span className="text-[10px] font-mono text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">E-Commerce UI Design</span>
+                <h3 className="text-lg font-bold mt-3 mb-2 text-white">Daraz E-Commerce Promotional UI Concept</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                  Crafted an engaging e-commerce interface featuring high-converting hero promotional banners, category navigation, and modern trending product cards.
+                </p>
+              </div>
             </div>
-            <span className="text-xs font-mono text-purple-400">Prompt Engineering & Rapid Prototyping</span>
+            <div className="px-6 pb-6">
+              <a
+                href="https://www.figma.com/design/hFyQTRxX7r1ZnYOBiXrmbU/Daraz---Service?node-id=0-1&p=f&t=p8wQmTkTpI1OUxUJ-0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-mono text-cyan-400 hover:underline inline-flex items-center gap-1"
+              >
+                [ Open in Figma ↗ ]
+              </a>
+            </div>
           </div>
 
-          {/* Project 3: Digital Content */}
+          {/* Project 3: AI-Assisted Web Experiments */}
           <div className="bg-gray-900/30 border border-gray-800 p-6 rounded-xl hover:border-purple-500/40 transition flex flex-col justify-between">
             <div>
-              <span className="text-[10px] font-mono text-pink-400 bg-pink-500/10 px-2 py-0.5 rounded">Figma & Canva</span>
-              <h3 className="text-lg font-bold mt-3 mb-2 text-white">Digital Content & Brand Assets</h3>
+              <span className="text-[10px] font-mono text-pink-400 bg-pink-500/10 px-2 py-0.5 rounded">AI & Vibe Coding</span>
+              <h3 className="text-lg font-bold mt-3 mb-2 text-white">AI-Assisted Web & UI Layout Experiments</h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                Designed promotional flyers, custom UI components, presentation templates, and social media brand kits adhering to visual design guidelines.
+                Translated visual design concepts and Figma wireframes directly into functional HTML/CSS/JS layouts using modern AI workflows.
               </p>
             </div>
-            <span className="text-xs font-mono text-purple-400">Visual Communication & Branding</span>
+            <span className="text-xs font-mono text-purple-400">Prompt Engineering & Prototyping</span>
           </div>
 
         </div>
